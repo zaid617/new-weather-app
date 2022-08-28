@@ -153,7 +153,7 @@ axios.get(`http://api.weatherapi.com/v1/current.json?key=825d194e09bc4229bde1115
         let text3 = data.forecast.forecastday[2].day.condition.text;
         futureIcon3.replace("/file// ");
 
-        //////////////////////Future Forecast//////////////////////////
+       
 
         let day1 = document.getElementById('date1');
         let firstDate = document.createElement('p');
@@ -211,7 +211,8 @@ axios.get(`http://api.weatherapi.com/v1/current.json?key=825d194e09bc4229bde1115
         sepPara.appendChild(sepParaText);
         mainFutureForcast.appendChild(sepPara);
 
-        //////////////////////////end//////////////////  
+      ///////////////////////////////////
+
         let day2 = document.getElementById('date2');
         let firstDate2 = document.createElement('p');
         let firstDate2Text2 = document.createTextNode("Forcast for " + " " + date2)
@@ -268,7 +269,7 @@ axios.get(`http://api.weatherapi.com/v1/current.json?key=825d194e09bc4229bde1115
         sepPara2.appendChild(sepParaText2);
         mainFutureForcast2.appendChild(sepPara2);
 
-        //////////////////////////end//////////////////
+        //////////////////////////
 
         let day3 = document.getElementById('date3');
         let firstDate23 = document.createElement('p');
