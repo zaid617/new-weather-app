@@ -5,6 +5,8 @@
 
          const data = response.data;
 
+         console.log(data);
+
          setTimeout(() => {
             document.getElementById('loading').style.display = "none";
          }, 2500);
@@ -135,7 +137,16 @@
          moreInfo.appendChild(moreInfoBox3);
 
       })
+
+   })();
    ////////////////////////////////end////////////////////////////
+
+
+
+
+
+
+(()=>{
 
    axios.get(`http://api.weatherapi.com/v1/forecast.json?key=ede7d8e1ad844d5aa2d122013222808&q=karachi&days=7`)
       .then(function (response) {
