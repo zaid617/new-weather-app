@@ -1,6 +1,6 @@
 
 (()=>{
-axios.get(`http://api.weatherapi.com/v1/current.json?key=825d194e09bc4229bde111544222808&q=karachi`)
+axios.get(`http://api.weatherapi.com/v1/current.json?key=ede7d8e1ad844d5aa2d122013222808&q=karachi`)
     .then(function (response) {
 
         const data = response.data;
@@ -122,7 +122,7 @@ axios.get(`http://api.weatherapi.com/v1/current.json?key=825d194e09bc4229bde1115
     })
         ////////////////////////////////end////////////////////////////
 
-        axios.get(`http://api.weatherapi.com/v1/forecast.json?key=825d194e09bc4229bde111544222808&q=karachi&days=7`)
+        axios.get(`http://api.weatherapi.com/v1/forecast.json?key=ede7d8e1ad844d5aa2d122013222808&q=karachi&days=7`)
         .then(function (response) {
     
             const data = response.data;
@@ -333,3 +333,26 @@ axios.get(`http://api.weatherapi.com/v1/current.json?key=825d194e09bc4229bde1115
         }) 
         
     })();
+
+    setInterval(() => {
+        const time = document.querySelector("#clock");
+        let date = new Date();
+        let hours = date.getHours();
+        let minutes = date.getMinutes();
+        let seconds = date.getSeconds();
+        let day_night = "AM";
+        if (hours > 12) {
+           day_night = "PM";
+           hours = hours - 12;
+        }
+        if (seconds < 10) {
+           seconds = "0" + seconds;
+        }
+        if (minutes < 10) {
+           minutes = "0" + minutes;
+        }
+        if (hours < 10) {
+           hours = "0" + hours;
+        }
+        time.textContent = hours + ":" + minutes + ":" + seconds + " " + day_night;
+     });

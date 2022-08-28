@@ -142,3 +142,17 @@ body{
 .futureForcast + p{
     padding-left: 45px;
 }
+
+#clock{
+    font-size: 3rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 20;
+    font-family: 'Sorts Mill Goudy', serif;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    padding: 20px;
+    backdrop-filter: blur(30px);
+}
