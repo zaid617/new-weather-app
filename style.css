@@ -129,7 +129,7 @@ body{
     padding: 10px;
     backdrop-filter: blur(30px);
     font-size: 1.4rem;
-    box-shadow: 0px 0px 20px 0px black;
+    box-shadow: inset 0px 0px 100px 0px black;
 }
 
 .futureForcast{
@@ -168,6 +168,7 @@ body{
     position: relative;
     display: block;
     background-color: #3a3a3a;
+    overflow: hidden;
 }
 
 
