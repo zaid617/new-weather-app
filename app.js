@@ -78,7 +78,7 @@ axios.get(`http://api.weatherapi.com/v1/current.json?key=ede7d8e1ad844d5aa2d1220
         let moreInfoBoxPara1 = document.createElement('p');
         let moreInfoBoxPara1Text = document.createTextNode("Precipitation : ");
         let moreInfoBoxPara2 = document.createElement('p');
-        let moreInfoBoxPara2Text = document.createTextNode(Precipitation);
+        let moreInfoBoxPara2Text = document.createTextNode(Precipitation + " " + "%");
 
         moreInfoBoxPara1.appendChild(moreInfoBoxPara1Text);
         moreInfoBox.appendChild(moreInfoBoxPara1);
@@ -193,12 +193,12 @@ axios.get(`http://api.weatherapi.com/v1/current.json?key=ede7d8e1ad844d5aa2d1220
         futureForCastBox3.setAttribute("class", "futureForcastbox3");
 
         let futureForCastBox3Para1 = document.createElement("p");
-        let futureForCastBox3Para1Text = document.createTextNode("Wind :" + " " + futureWind1)
+        let futureForCastBox3Para1Text = document.createTextNode("Wind :" + " " + futureWind1 + " " + "Kph")
         futureForCastBox3Para1.appendChild(futureForCastBox3Para1Text);
         futureForCastBox3.appendChild(futureForCastBox3Para1);
 
         let futureForCastBox3Para2 = document.createElement("p");
-        let futureForCastBox3Para2Text = document.createTextNode("Precipitation :" + " " + futurePrecip1);
+        let futureForCastBox3Para2Text = document.createTextNode("Precipitation :" + " " + futurePrecip1 + " " + "%");
         futureForCastBox3Para2.appendChild(futureForCastBox3Para2Text);
         futureForCastBox3.appendChild(futureForCastBox3Para2);
         futureForCast.appendChild(futureForCastBox3);
@@ -251,12 +251,12 @@ axios.get(`http://api.weatherapi.com/v1/current.json?key=ede7d8e1ad844d5aa2d1220
         futureForCastBox32.setAttribute("class", "futureForcastbox3");
 
         let futureForCastBox3Para12 = document.createElement("p");
-        let futureForCastBox3Para1Text2 = document.createTextNode("Wind :" + " " + futureWind2)
+        let futureForCastBox3Para1Text2 = document.createTextNode("Wind :" + " " + futureWind2  + " " + "Kph")
         futureForCastBox3Para12.appendChild(futureForCastBox3Para1Text2);
         futureForCastBox32.appendChild(futureForCastBox3Para12);
 
         let futureForCastBox3Para22 = document.createElement("p");
-        let futureForCastBox3Para2Text2 = document.createTextNode("Precipitation :" + " " + futurePrecip2);
+        let futureForCastBox3Para2Text2 = document.createTextNode("Precipitation :" + " " + futurePrecip2 + " " + "%");
         futureForCastBox3Para22.appendChild(futureForCastBox3Para2Text2);
         futureForCastBox32.appendChild(futureForCastBox3Para22);
         futureForCast2.appendChild(futureForCastBox32);
@@ -309,12 +309,12 @@ axios.get(`http://api.weatherapi.com/v1/current.json?key=ede7d8e1ad844d5aa2d1220
         futureForCastBox323.setAttribute("class", "futureForcastbox3");
 
         let futureForCastBox3Para123 = document.createElement("p");
-        let futureForCastBox3Para1Text23 = document.createTextNode("Wind :" + " " + futureWind3)
+        let futureForCastBox3Para1Text23 = document.createTextNode("Wind :" + " " + futureWind3 + " " + "Kph")
         futureForCastBox3Para123.appendChild(futureForCastBox3Para1Text23);
         futureForCastBox323.appendChild(futureForCastBox3Para123);
 
         let futureForCastBox3Para223 = document.createElement("p");
-        let futureForCastBox3Para2Text23 = document.createTextNode("Precipitation :" + " " + futurePrecip3);
+        let futureForCastBox3Para2Text23 = document.createTextNode("Precipitation :" + " " + futurePrecip3 + " " + "%");
         futureForCastBox3Para223.appendChild(futureForCastBox3Para2Text23);
         futureForCastBox323.appendChild(futureForCastBox3Para223);
         futureForCast23.appendChild(futureForCastBox323);
