@@ -7,7 +7,7 @@
 
          setTimeout(() => {
             document.getElementById('loading').style.display = "none";
-         }, 2500);
+         }, 2300);
 
 
          //for current weather//

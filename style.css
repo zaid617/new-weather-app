@@ -85,7 +85,7 @@ body {
 }
 
 .blur {
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(5px);
 }
 
 .mainInfo {
@@ -125,7 +125,7 @@ body {
   padding: 15px;
   color: white;
   font-size: 1.5rem;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(5px);
 }
 
 .moreInfoBox {
@@ -141,7 +141,7 @@ body {
   border: 4px solid white;
   border-radius: 10px;
   padding: 10px;
-  backdrop-filter: blur(30px);
+  backdrop-filter: blur(8px);
   font-size: 1.4rem;
   box-shadow: inset 0px 0px 100px 0px black;
 }
@@ -172,7 +172,7 @@ body {
   border-bottom: 2px solid white;
   border-radius: 10px;
   padding: 5px;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(5px);
 }
 
 
@@ -182,7 +182,7 @@ body {
   height: 100vh;
   position: relative;
   display: block;
-  background-color: #3a3a3a;
+  background-color: #173b54;
   overflow: hidden;
 }
 
