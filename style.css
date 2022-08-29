@@ -13,18 +13,19 @@ body {
   height: 100vh;
   width: 100%;
   display: flex;
+  
 }
 
 .main::before {
   content: "";
-  background-image: url('./bg.gif');
+  background-image: url('./bg.jpg');
   background-size: cover;
   position: absolute;
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: 0.98;
+  opacity: 0.88;
 }
 
 .box1 {
@@ -34,7 +35,7 @@ body {
   padding: 2rem;
   width: 30%;
   color: black;
-  box-shadow: inset 0px 0px 100px 0px black;
+  box-shadow: inset 0px 0px 200px black;
 }
 
 .box2 {
@@ -48,6 +49,7 @@ body {
   padding: 2rem;
   color: white;
   overflow-y: auto;
+  box-shadow: inset 0px 0px 200px black;
 }
 
 .head {
@@ -83,7 +85,7 @@ body {
 }
 
 .blur {
-  backdrop-filter: blur(30px);
+  backdrop-filter: blur(3px);
 }
 
 .mainInfo {
@@ -123,6 +125,7 @@ body {
   padding: 15px;
   color: white;
   font-size: 1.5rem;
+  backdrop-filter: blur(3px);
 }
 
 .moreInfoBox {
@@ -131,6 +134,7 @@ body {
   justify-content: space-between;
   width: 100%;
   padding: 3px;
+  text-shadow: 0px 0px 8px black;
 }
 
 .mainFutureForcast {
@@ -165,11 +169,10 @@ body {
   justify-content: center;
   order: 20;
   font-family: 'Sorts Mill Goudy', serif;
-  border-top: 2px solid white;
   border-bottom: 2px solid white;
   border-radius: 10px;
   padding: 5px;
-  backdrop-filter: blur(30px);
+  backdrop-filter: blur(3px);
 }
 
 
