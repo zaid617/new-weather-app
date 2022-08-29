@@ -1,7 +1,7 @@
 
 (() => {
-   axios.get(`https://api.weatherapi.com/v1/current.json?key=ede7d8e1ad844d5aa2d122013222808&q=karachi`)
-      .then(function (response) {
+   axios.get(`https://api.weatherapi.com/v1/forecast.json?key=ede7d8e1ad844d5aa2d122013222808&q=karachi&days=14`)
+   .then(function (response) {
 
          const data = response.data;
 
@@ -159,27 +159,9 @@
          moreInfoBox3.appendChild(moreInfoBox3Para2);
          moreInfo.appendChild(moreInfoBox3);
 
-      })
 
-   })();
-
-
+  
    ////////////////////////////////current section end////////////////////////////
-
-
-
-
-
-
-(()=>{
-
-   axios.get(`https://api.weatherapi.com/v1/forecast.json?key=ede7d8e1ad844d5aa2d122013222808&q=karachi&days=7`)
-      .then(function (response) {
-
-         const data = response.data;
-         //for future weather//
-
-         console.log(data);
 
 
          for (let i = 0; i < data.forecast.forecastday.length; i++) {
