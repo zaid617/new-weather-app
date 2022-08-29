@@ -168,7 +168,7 @@ body {
   border-top: 2px solid white;
   border-bottom: 2px solid white;
   border-radius: 10px;
-  padding: 20px;
+  padding: 5px;
   backdrop-filter: blur(30px);
 }
 

@@ -5,8 +5,6 @@
 
          const data = response.data;
 
-         console.log(data);
-
          setTimeout(() => {
             document.getElementById('loading').style.display = "none";
          }, 2500);
@@ -164,7 +162,9 @@
       })
 
    })();
-   ////////////////////////////////end////////////////////////////
+
+
+   ////////////////////////////////current section end////////////////////////////
 
 
 
@@ -179,209 +179,86 @@
          const data = response.data;
          //for future weather//
 
-         let date1 = data.forecast.forecastday[0].date
-         let futureMaxTemp1 = data.forecast.forecastday[0].day.maxtemp_c;
-         let futureMinTemp1 = data.forecast.forecastday[0].day.mintemp_c;
-         let futureWind1 = data.forecast.forecastday[0].day.maxwind_kph;
-         let futurePrecip1 = data.forecast.forecastday[0].day.totalprecip_mm;
-         let futureIcon1 = data.forecast.forecastday[0].day.condition.icon;
-         let text1 = data.forecast.forecastday[0].day.condition.text;
+         console.log(data);
+
+
+         for (let i = 0; i < data.forecast.forecastday.length; i++) {
+            console.log(i);
+            
+         
+
+         let date1 = data.forecast.forecastday[i].date
+         let futureMaxTemp1 = data.forecast.forecastday[i].day.maxtemp_c;
+         let futureMinTemp1 = data.forecast.forecastday[i].day.mintemp_c;
+         let futureWind1 = data.forecast.forecastday[i].day.maxwind_kph;
+         let futurePrecip1 = data.forecast.forecastday[i].day.totalprecip_mm;
+         let futureIcon1 = data.forecast.forecastday[i].day.condition.icon;
+         let text1 = data.forecast.forecastday[i].day.condition.text;
          futureIcon1.replace("/file// ");
-         let date2 = data.forecast.forecastday[1].date
-         let futureMaxTemp2 = data.forecast.forecastday[1].day.maxtemp_c;
-         let futureMinTemp2 = data.forecast.forecastday[1].day.mintemp_c;
-         let futureWind2 = data.forecast.forecastday[1].day.maxwind_kph;
-         let futurePrecip2 = data.forecast.forecastday[1].day.totalprecip_mm;
-         let futureIcon2 = data.forecast.forecastday[1].day.condition.icon;
-         let text2 = data.forecast.forecastday[1].day.condition.text;
-         futureIcon2.replace("/file// ");
-         let date3 = data.forecast.forecastday[2].date
-         let futureMaxTemp3 = data.forecast.forecastday[2].day.maxtemp_c;
-         let futureMinTemp3 = data.forecast.forecastday[2].day.mintemp_c;
-         let futureWind3 = data.forecast.forecastday[2].day.maxwind_kph;
-         let futurePrecip3 = data.forecast.forecastday[2].day.totalprecip_mm;
-         let futureIcon3 = data.forecast.forecastday[2].day.condition.icon;
-         let text3 = data.forecast.forecastday[2].day.condition.text;
-         futureIcon3.replace("/file// ");
-
-
-
-         let day1 = document.getElementById('date1');
+      
+         let box2 = document.getElementById('box2');
+         let day1 = document.createElement('div');
+         day1.setAttribute('class', "forecastTime");
          let firstDate = document.createElement('p');
          let firstDateText = document.createTextNode("Forcast for " + " " + date1)
          firstDate.appendChild(firstDateText);
          day1.appendChild(firstDate);
-
-         let futureForCast = document.getElementById('futureForcast');
+         box2.appendChild(day1)
+         
+         let mainFutureForcast = document.createElement('div');
+         mainFutureForcast.setAttribute('class', 'mainFutureForcast')
+         let futureForCast = document.createElement('div')
+         futureForCast.setAttribute('class', "futureForcast");
          let futureForCastBox1 = document.createElement('div');
          futureForCastBox1.setAttribute("class", "futureForcastbox1");
          let futureForCastImg1 = document.createElement('img');
          futureForCastImg1.src = futureIcon1;
+         
 
          futureForCastBox1.appendChild(futureForCastImg1);
          futureForCast.appendChild(futureForCastBox1);
-
-         //////////////////////////////
+         mainFutureForcast.appendChild(futureForCast);
+         
+         
 
          let futureForCastBox2 = document.createElement('div');
          futureForCastBox2.setAttribute("class", "futureForcastbox2");
-
+         
          let futureForCastBox2Para1 = document.createElement("p");
          let futureForCastBox2Para1Text = document.createTextNode("Max Temp. :" + " " + futureMaxTemp1 + " " + "°C")
          futureForCastBox2Para1.appendChild(futureForCastBox2Para1Text);
          futureForCastBox2.appendChild(futureForCastBox2Para1);
-
+         
          let futureForCastBox2Para2 = document.createElement("p");
          let futureForCastBox2Para2Text = document.createTextNode("Min Temp. :" + " " + futureMinTemp1 + " " + "°C");
          futureForCastBox2Para2.appendChild(futureForCastBox2Para2Text);
          futureForCastBox2.appendChild(futureForCastBox2Para2);
-
+         
          futureForCast.appendChild(futureForCastBox2);
-
-         //////////////////////
-
+         
+         
          let futureForCastBox3 = document.createElement('div');
          futureForCastBox3.setAttribute("class", "futureForcastbox3");
-
+         
          let futureForCastBox3Para1 = document.createElement("p");
          let futureForCastBox3Para1Text = document.createTextNode("Wind :" + " " + futureWind1 + " " + "Kph")
          futureForCastBox3Para1.appendChild(futureForCastBox3Para1Text);
          futureForCastBox3.appendChild(futureForCastBox3Para1);
-
+         box2.appendChild(mainFutureForcast);
+         
          let futureForCastBox3Para2 = document.createElement("p");
          let futureForCastBox3Para2Text = document.createTextNode("Precipitation :" + " " + futurePrecip1 + " " + "%");
          futureForCastBox3Para2.appendChild(futureForCastBox3Para2Text);
          futureForCastBox3.appendChild(futureForCastBox3Para2);
          futureForCast.appendChild(futureForCastBox3);
-
-
-         ///////////////////////
-         let mainFutureForcast = document.getElementById("mainFutureForcast")
+         
          let sepPara = document.createElement("p");
          let sepParaText = document.createTextNode(text1);
          sepPara.appendChild(sepParaText);
          mainFutureForcast.appendChild(sepPara);
 
+         }
          ///////////////////////////////////
-
-         let day2 = document.getElementById('date2');
-         let firstDate2 = document.createElement('p');
-         let firstDate2Text2 = document.createTextNode("Forcast for " + " " + date2)
-         firstDate2.appendChild(firstDate2Text2);
-         day2.appendChild(firstDate2);
-
-         let futureForCast2 = document.getElementById('futureForcast2');
-         let futureForCastBox12 = document.createElement('div');
-         futureForCastBox12.setAttribute("class", "futureForcastbox1");
-         let futureForCastImg12 = document.createElement('img');
-         futureForCastImg12.src = futureIcon2;
-
-         futureForCastBox12.appendChild(futureForCastImg12);
-         futureForCast2.appendChild(futureForCastBox12);
-
-         //////////////////////////////
-
-         let futureForCastBox22 = document.createElement('div');
-         futureForCastBox22.setAttribute("class", "futureForcastbox2");
-
-         let futureForCastBox2Para12 = document.createElement("p");
-         let futureForCastBox2Para1Text2 = document.createTextNode("Max Temp. :" + " " + futureMaxTemp2 + " " + "°C")
-         futureForCastBox2Para12.appendChild(futureForCastBox2Para1Text2);
-         futureForCastBox22.appendChild(futureForCastBox2Para12);
-
-         let futureForCastBox2Para22 = document.createElement("p");
-         let futureForCastBox2Para2Text2 = document.createTextNode("Min Temp. :" + " " + futureMinTemp2 + " " + "°C");
-         futureForCastBox2Para22.appendChild(futureForCastBox2Para2Text2);
-         futureForCastBox22.appendChild(futureForCastBox2Para22);
-
-         futureForCast2.appendChild(futureForCastBox22);
-
-         //////////////////////
-
-         let futureForCastBox32 = document.createElement('div');
-         futureForCastBox32.setAttribute("class", "futureForcastbox3");
-
-         let futureForCastBox3Para12 = document.createElement("p");
-         let futureForCastBox3Para1Text2 = document.createTextNode("Wind :" + " " + futureWind2 + " " + "Kph")
-         futureForCastBox3Para12.appendChild(futureForCastBox3Para1Text2);
-         futureForCastBox32.appendChild(futureForCastBox3Para12);
-
-         let futureForCastBox3Para22 = document.createElement("p");
-         let futureForCastBox3Para2Text2 = document.createTextNode("Precipitation :" + " " + futurePrecip2 + " " + "%");
-         futureForCastBox3Para22.appendChild(futureForCastBox3Para2Text2);
-         futureForCastBox32.appendChild(futureForCastBox3Para22);
-         futureForCast2.appendChild(futureForCastBox32);
-
-
-         ///////////////////////
-         let mainFutureForcast2 = document.getElementById("mainFutureForcast2")
-         let sepPara2 = document.createElement("p");
-         let sepParaText2 = document.createTextNode(text2);
-         sepPara2.appendChild(sepParaText2);
-         mainFutureForcast2.appendChild(sepPara2);
-
-         //////////////////////////
-
-         let day3 = document.getElementById('date3');
-         let firstDate23 = document.createElement('p');
-         let firstDate2Text23 = document.createTextNode("Forcast for " + " " + date3)
-         firstDate23.appendChild(firstDate2Text23);
-         day3.appendChild(firstDate23);
-
-         let futureForCast23 = document.getElementById('futureForcast3');
-         let futureForCastBox123 = document.createElement('div');
-         futureForCastBox123.setAttribute("class", "futureForcastbox1");
-         let futureForCastImg123 = document.createElement('img');
-         futureForCastImg123.src = futureIcon2;
-
-         futureForCastBox123.appendChild(futureForCastImg123);
-         futureForCast23.appendChild(futureForCastBox123);
-
-         //////////////////////////////
-
-         let futureForCastBox223 = document.createElement('div');
-         futureForCastBox223.setAttribute("class", "futureForcastbox2");
-
-         let futureForCastBox2Para123 = document.createElement("p");
-         let futureForCastBox2Para1Text23 = document.createTextNode("Max Temp. :" + " " + futureMaxTemp3 + " " + "°C")
-         futureForCastBox2Para123.appendChild(futureForCastBox2Para1Text23);
-         futureForCastBox223.appendChild(futureForCastBox2Para123);
-
-         let futureForCastBox2Para223 = document.createElement("p");
-         let futureForCastBox2Para2Text23 = document.createTextNode("Min Temp. :" + " " + futureMinTemp3 + " " + "°C");
-         futureForCastBox2Para223.appendChild(futureForCastBox2Para2Text23);
-         futureForCastBox223.appendChild(futureForCastBox2Para223);
-
-         futureForCast23.appendChild(futureForCastBox223);
-
-         //////////////////////
-
-         let futureForCastBox323 = document.createElement('div');
-         futureForCastBox323.setAttribute("class", "futureForcastbox3");
-
-         let futureForCastBox3Para123 = document.createElement("p");
-         let futureForCastBox3Para1Text23 = document.createTextNode("Wind :" + " " + futureWind3 + " " + "Kph")
-         futureForCastBox3Para123.appendChild(futureForCastBox3Para1Text23);
-         futureForCastBox323.appendChild(futureForCastBox3Para123);
-
-         let futureForCastBox3Para223 = document.createElement("p");
-         let futureForCastBox3Para2Text23 = document.createTextNode("Precipitation :" + " " + futurePrecip3 + " " + "%");
-         futureForCastBox3Para223.appendChild(futureForCastBox3Para2Text23);
-         futureForCastBox323.appendChild(futureForCastBox3Para223);
-         futureForCast23.appendChild(futureForCastBox323);
-
-
-         ///////////////////////
-         let mainFutureForcast23 = document.getElementById("mainFutureForcast3")
-         let sepPara23 = document.createElement("p");
-         let sepParaText23 = document.createTextNode(text3);
-         sepPara23.appendChild(sepParaText23);
-         mainFutureForcast23.appendChild(sepPara23);
-
-         //////////////////////////end//////////////////
-
-
-       
 
       })
 
