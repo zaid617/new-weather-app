@@ -21,6 +21,10 @@ body {
   color: white;
   text-decoration: none;
   font-size: 2rem;
+  transition: all 0.5s ease-in-out;
+}
+.anchor :hover{
+  border-bottom: 2px solid white;
 }
 .flex{
   display: flex;
