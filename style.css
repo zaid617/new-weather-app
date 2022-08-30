@@ -16,23 +16,64 @@ body {
   
 }
 
-.anchor{
-  background-color: black;
-  color: white;
-  text-decoration: none;
-  font-size: 2rem;
-  transition: all 0.5s ease-in-out;
+.Hotbg {
+  position: relative;
+  top: 0;
+  left: 100%;
+  transform: translate(-100%);
+  background: black;
+  height: 40px;
+  border-radius: 40px;
+  padding: 10px;
+  font-family: 'Sorts Mill Goudy', serif;
+  width: max-content;
 }
-.anchor :hover{
-  border-bottom: 2px solid white;
+
+.Hotbg:hover>.Hotbg-txt {
+  width: 240px;
+  padding: 0 6px;
 }
-.flex{
+
+.Hotbg:hover>.Hotbg-btn {
+  background: azure;
+  color: black;
+}
+
+.Hotbg-btn {
+  color: #e84118;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: black;
   display: flex;
-  justify-content: flex-end;
-  background-color: black;
-  position: sticky;
-  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  color: azure;
+  cursor: pointer;
 }
+
+.Hotbg-btn>i {
+  font-size-adjust: 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.Hotbg-txt {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+  color: azure;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0px;
+}
+
 .main::before {
   content: "";
   background-image: url('./bg.jpg');

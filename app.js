@@ -1,26 +1,25 @@
+(()=>{let lng, lat;
+navigator.geolocation.getCurrentPosition((position) => {
+    lat = position.coords.latitude;
+    lng = position.coords.longitude;
 
-(() => {
+   let city = `${lat},${lng}`
+      
+   weather(city);
 
+   console.log(city);
 
-   let city = JSON.parse(localStorage.getItem("city"))
-   
+})
+
+})();
+
+let weather = (city)=>{
 
    setTimeout(() => {
       document.getElementById('loading').style.display = "none";
-      // document.getElementById('anchor').style.display = "inline";
       
    }, 2300);
    
-
-
-  
-
-   if (city) {
-
-
-      window.location.herf = "./index.html"
-   
-
    
    axios.get(`https://api.weatherapi.com/v1/forecast.json?key=ede7d8e1ad844d5aa2d122013222808&q=${city}&days=14`)
    .then(function (response) {
@@ -260,11 +259,43 @@
          ///////////////////////////////////
 
       })
+  
+
+
    }
 
-   else{
-      location.href = "./index.html"
-   }
 
-})();
+   
+let changeCity = ()=>{
+   
+   setTimeout(() => {
+      document.getElementById('loading').style.display = "none";
+      
+   }, 2300);
 
+   if (document.getElementById('text').value !== "") {
+      city = document.getElementById('text').value;
+      
+      document.getElementById('loading').style.display = "flex";
+      document.getElementById('forecastTime').innerHTML = "";
+      document.getElementById('mainInfo').innerHTML = "";
+      document.getElementById('clock').innerHTML = "";
+      document.getElementById('moreInfo').innerHTML = "";
+      document.getElementById('head').innerHTML = "";
+      city = document.getElementById("text").value;
+      
+      
+      weather(city);
+
+
+}
+else{
+   return;
+}
+
+
+
+
+
+
+}
