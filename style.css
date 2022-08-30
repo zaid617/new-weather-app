@@ -611,7 +611,7 @@ a {
   }
   .Hotbg{
     position: relative;
-    top: 0;
+    ttop: -34px;
     left: 50%;
     transform: translate(-50%,50%);
     margin-bottom: 20px;
