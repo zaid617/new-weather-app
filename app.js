@@ -1,4 +1,10 @@
-(()=>{let lng, lat;
+(()=>{
+   if (navigator.geolocation) {
+      
+   
+   let lng, lat;
+
+   
 navigator.geolocation.getCurrentPosition((position) => {
     lat = position.coords.latitude;
     lng = position.coords.longitude;
@@ -10,7 +16,11 @@ navigator.geolocation.getCurrentPosition((position) => {
    console.log(city);
 
 })
+   }
 
+   else{
+      weather("karachi")
+   }
 })();
 
 let weather = (city)=>{

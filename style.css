@@ -30,8 +30,9 @@ body {
 }
 
 .Hotbg:hover>.Hotbg-txt {
-  width: 240px;
+  width: max-content;
   padding: 0 6px;
+  transition: all 0.5s ease-in-out;
 }
 
 .Hotbg:hover>.Hotbg-btn {
@@ -68,7 +69,7 @@ a {
   outline: none;
   padding: 0;
   color: azure;
-  font-size: 16px;
+  font-size: 14px;
   transition: 0.4s;
   line-height: 40px;
   width: 0px;
@@ -607,6 +608,13 @@ a {
 
   #clock{
     margin: 10px;
+  }
+  .Hotbg{
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,50%);
+    margin-bottom: 20px;
   }
 }
 
