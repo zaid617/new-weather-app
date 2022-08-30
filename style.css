@@ -16,6 +16,19 @@ body {
   
 }
 
+.anchor{
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+}
+.flex{
+  display: flex;
+  justify-content: flex-end;
+  background-color: black;
+  position: sticky;
+  padding: 5px;
+}
 .main::before {
   content: "";
   background-image: url('./bg.jpg');
@@ -182,11 +195,9 @@ body {
   height: 100vh;
   position: relative;
   display: block;
-  background-color: #173b54;
+  background-color: #21415a;
   overflow: hidden;
 }
-
-
 
 
 /* -- Loading thingy --*/
@@ -519,6 +530,9 @@ body {
   .mainFutureForcast {
     font-size: 0.7rem;
   }
+  .anchor{
+    font-size: 1.5rem;
+  }
 }
 
 @media screen and (max-width:500px) {
@@ -550,3 +564,8 @@ body {
     margin: 10px;
   }
 }
+
+
+
+
+

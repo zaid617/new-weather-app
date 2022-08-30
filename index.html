@@ -1,57 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <link rel="stylesheet" href="button.css">
+        <title>Search-Box</title>
+    </head>
+    <body>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://kit.fontawesome.com/52837d9cff.js" crossorigin="anonymous"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Nanum+Myeongjo&family=Prata&family=Sorts+Mill+Goudy:ital@1&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
+        <h1> Enter Your City Name :</h1>
 
-<body>
-
-    <div class="drawing" id="loading"><div class="loading-dot"></div></div>
-
-
-
-    <div class="main">
-
-        <div class="box1">
-            <div class="head" id="head"></div>
-
-            <div class="forecastTime" id="forecastTime"></div>
-
-            <hr>
-
-            <div class="mainInfo blur" id="mainInfo"></div>
-
-            <hr>
-
-            <div class="clock" id=clock>
-                
-            </div>
-
-            <div class="moreInfo" id="moreInfo"></div>
-
-
+        <div class="Hotbg">
+            <input id="text" type="text" class="Hotbg-txt" placeholder="Enter Your City Name >>>">
+            <a  class="Hotbg-btn" id="btn" onclick="onclickbtn()">
+                <i class="fa fa-search"></i>
+            </a>
         </div>
 
-        <div class="box2" id="box2">
-            <div class="secondHead">
-                <h3 class="subHeading">WEEK </h3>
-            </div>
-        </div>
-
-    </div>
+        <script>
 
 
-    <script src="app.js"></script>
-</body>
+        let city = JSON.parse(localStorage.getItem("city"))
 
+            if (city) {
+                localStorage.removeItem("city")
+                console.log(city);
+            }
+
+            
+             let onclickbtn = ()=>{
+                let city = document.getElementById('text').value;
+                if (city === "") {
+
+                    return;
+                }
+                console.log("hello");
+                location.href = "./main.html"
+                localStorage.setItem("city" , JSON.stringify(city));
+            }
+        </script>
+    </body>
 </html>

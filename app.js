@@ -1,13 +1,32 @@
 
 (() => {
-   axios.get(`https://api.weatherapi.com/v1/forecast.json?key=ede7d8e1ad844d5aa2d122013222808&q=karachi&days=14`)
+
+
+   let city = JSON.parse(localStorage.getItem("city"))
+   
+
+   setTimeout(() => {
+      document.getElementById('loading').style.display = "none";
+      // document.getElementById('anchor').style.display = "inline";
+      
+   }, 2300);
+   
+
+
+  
+
+   if (city) {
+
+
+      window.location.herf = "./index.html"
+   
+
+   
+   axios.get(`https://api.weatherapi.com/v1/forecast.json?key=ede7d8e1ad844d5aa2d122013222808&q=${city}&days=14`)
    .then(function (response) {
 
          const data = response.data;
 
-         setTimeout(() => {
-            document.getElementById('loading').style.display = "none";
-         }, 2300);
 
 
          //for current weather//
@@ -23,7 +42,6 @@
          let visibility = data.current.vis_km;
          let humidity = data.current.humidity;
          let Precipitation = data.current.precip_in;
-         let currentTime = data.location.localtime_epoch;
 
 
 
@@ -165,7 +183,6 @@
 
 
          for (let i = 0; i < data.forecast.forecastday.length; i++) {
-            console.log(i);
             
          
 
@@ -243,6 +260,11 @@
          ///////////////////////////////////
 
       })
+   }
+
+   else{
+      location.href = "./index.html"
+   }
 
 })();
 
