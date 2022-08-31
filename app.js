@@ -1,22 +1,19 @@
 (()=>{
    if (navigator.geolocation) {
       
-   
-   let lng, lat;
    navigator.geolocation.getCurrentPosition((position) => {
-    lat = position.coords.latitude;
-    lng = position.coords.longitude;
-
-   let city = `${lat},${lng}`
+         let lat = position.coords.latitude;
+         let lng = position.coords.longitude;
+      
+         city = lat+","+ lng ;
       
    weather(city);
 
    console.log(city);
 
 })
-   }
-
-   else{
+}
+else{
       weather("karachi")
    }
 })();
