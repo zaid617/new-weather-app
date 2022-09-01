@@ -2,8 +2,8 @@
    if (navigator.geolocation) {
       
    navigator.geolocation.getCurrentPosition((position) => {
-         let lat = position.coords.latitude;
-         let lng = position.coords.longitude;
+         let lat = position.coords.latitude.toFixed(2);
+         let lng = position.coords.longitude.toFixed(2);
       
          city = lat+","+ lng ;
       
