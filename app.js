@@ -31,7 +31,7 @@ let weather = (city)=>{
          //for current weather//
          
          let time = data.location.localtime_epoch * 1000;
-         let location = data.location.name;
+         let location = data.location.tz_id;
          let last_updated = data.current.last_updated;
          last_updated = last_updated.slice(12);
          let temp_c = data.current.temp_c;
