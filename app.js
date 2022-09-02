@@ -19,7 +19,7 @@ let weather = (city)=>{
    setTimeout(() => {
       document.getElementById('loading').style.display = "none";
       
-   }, 1500);
+   }, 1200);
 
    
    axios.get(`https://api.weatherapi.com/v1/forecast.json?key=ede7d8e1ad844d5aa2d122013222808&q=${city}&days=14`)
@@ -254,7 +254,7 @@ let changeCity = ()=>{
    setTimeout(() => {
       document.getElementById('loading').style.display = "none";
       
-   }, 2300);
+   }, 1200);
 
    if (document.getElementById('text').value !== "") {
       city = document.getElementById('text').value;
