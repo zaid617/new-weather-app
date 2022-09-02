@@ -18,7 +18,7 @@ let weather = (city)=>{
    setTimeout(() => {
       document.getElementById('loading').style.display = "none";
       
-   }, 2300);
+   }, 1500);
    
    
    axios.get(`https://api.weatherapi.com/v1/forecast.json?key=ede7d8e1ad844d5aa2d122013222808&q=${city}&days=14`)
