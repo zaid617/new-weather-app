@@ -11,7 +11,8 @@
 
    console.log(city);
 
-})();
+})
+})()
 
 let weather = (city)=>{
 
@@ -19,7 +20,7 @@ let weather = (city)=>{
       document.getElementById('loading').style.display = "none";
       
    }, 1500);
-   
+
    
    axios.get(`https://api.weatherapi.com/v1/forecast.json?key=ede7d8e1ad844d5aa2d122013222808&q=${city}&days=14`)
    .then(function (response) {
@@ -243,7 +244,7 @@ let weather = (city)=>{
       })
   
 
-
+   
    }
 
 
@@ -274,10 +275,4 @@ let changeCity = ()=>{
 else{
    return;
 }
-
-
-
-
-
-
 }
