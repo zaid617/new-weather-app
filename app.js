@@ -1,5 +1,5 @@
 (()=>{
-   if (navigator.geolocation) {
+  
       
    navigator.geolocation.getCurrentPosition((position) => {
          let lat = position.coords.latitude.toFixed(2);
@@ -11,11 +11,6 @@
 
    console.log(city);
 
-})
-}
-else{
-      weather("karachi")
-   }
 })();
 
 let weather = (city)=>{
